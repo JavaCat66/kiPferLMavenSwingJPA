@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS KiBase(
+id Varchar(7) Primary Key,
+bezeichnung Varchar(50) not null,
+ColNr Int unsigned not null,
+praefix Char(2) not null,
+FieldName Varchar(50) not null,
+FieldType Varchar(20) not null,
+FieldLength Int unsigned not null,
+DecimalPlaces Int unsigned not null,
+KiUnsigned Char(1) default 'J',
+KiNull Char(1) default 'N',
+PrimaryKey Char(1) default 'N',
+KiDefault Varchar(50),
+infoText Varchar(250),
+dateOfCreation Date not null default '0000-00-00',
+timeStampChange Timestamp default Current_Timestamp,
+modul Varchar(50) default 'data.helpMe.establishKiDB',
+program Varchar(50) default 'KiDBTable',
+method Varchar(50) default 'doInsertIntoKiBase',
+groupId Varchar(7) default 'GR00001',
+user Varchar(30) default 'Susanna',
+status Char(1) default 'A')
+ENGINE=InnoDB;
+
